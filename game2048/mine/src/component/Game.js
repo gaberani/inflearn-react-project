@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AboveGame() {
+export default function Game() {
   return (
     <div className="game-container">
       <div className="grid-container">

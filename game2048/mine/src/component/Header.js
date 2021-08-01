@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function App() {
+export default function Header() {
   return (
     <div className="heading">
       <div className="title"></div>
