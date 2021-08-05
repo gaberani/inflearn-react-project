@@ -8,13 +8,13 @@ export default function Game() {
   return (
     <div className="game-container">
       <div className="grid-container">
-        {times(MAX_POS, () => {
+        {times(MAX_POS, () => (
           <div className="grid-row">
-            {times(MAX_POS, () => {
+            {times(MAX_POS, () => (
               <div className="grid-cell"></div>
-            })}
+            ))}
           </div>
-        })}
+        ))}
       </div>
 
       <div className="tile-container">
