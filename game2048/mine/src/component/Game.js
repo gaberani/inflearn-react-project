@@ -18,13 +18,13 @@ export default function Game() {
       </div>
 
       <div className="tile-container">
-        {tileList.map(item => {
-          <div 
+        {tileList.map(item => (
+          <div
             className={`tile tile-${item.value} tile-position-${item.x}-${item.y} tile-new`}
           >
             <div className="tile-inner">{item.value}</div>
           </div>
-        })}
+        ))}
       </div>
     </div>
   );
