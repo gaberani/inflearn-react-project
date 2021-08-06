@@ -5,6 +5,8 @@ import { getInitialTileList } from '../util/tile';
 
 export default function Game() {
   const [tileList, setTileList] = useState(getInitialTileList);
+  // up, down, left, right
+  // useMoveTile();
   return (
     <div className="game-container">
       <div className="grid-container">
