@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { addKeyObserver, removeKeyObserver } from "../util/keyboard";
-import { makeTile } from "../util/tile";
+import { makeTile, moveTile } from "../util/tile";
 
 export default function useMoveTile({ tileList, setTileList }) {
   function moveAndAdd({ x, y }) {
     const newTileList = moveTile({ tileList, x, y })
     const newTile = makeTile(newTileList);
+    newTile.isNew = true;
+    newTile.isMerged = true;
     newTileList.push(newTile)
     setTileList(newTileList)
   }
