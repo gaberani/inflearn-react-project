@@ -1,5 +1,6 @@
 import { getRandomInteger } from "./number";
 import { MAX_POS } from "../constant";
+import { assert } from "./assert";
 
 export function getInitialTileList() {
   const tileList = [];
@@ -22,7 +23,9 @@ export function makeTile(tileList) {
       id: currentId++,
       x: getRandomInteger(1, MAX_POS),
       y: getRandomInteger(1, MAX_POS),
-      value: 2
+      value: 2,
+      isNew: undefined,
+      isMerged: undefined
     }
   }
   return tile
