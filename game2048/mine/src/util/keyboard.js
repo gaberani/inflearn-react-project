@@ -4,7 +4,7 @@ const observerMap = {}
 export function addKeyObserver(key, callback) {
   if(!observerMap[key]) {
     observerMap[key] = []
-    hotkeys(key, () => {});
+    hotkeys(key, () => executeCallbacks(key));
   }
 }
 
@@ -12,7 +12,7 @@ export function removeKeyObserver(key, callback) {
   observerMap[key] = observerMap[key].filter(item => item !== callback);
 }
 
-function excuteCallbacks(key) {
+function executeCallbacks(key) {
   for (const ob of observerMap[key]) {
     ob() ;
   }
