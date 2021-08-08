@@ -6,6 +6,7 @@ export function addKeyObserver(key, callback) {
     observerMap[key] = []
     hotkeys(key, () => executeCallbacks(key));
   }
+  observerMap[key].push(callback);
 }
 
 export function removeKeyObserver(key, callback) {
