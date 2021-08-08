@@ -18,7 +18,7 @@ export function checkCollision(tileList, tile) {
 let currentId = 0;
 export function makeTile(tileList) {
   let tile;
-  while(!tile || checkCollision(tileList,tile )) {
+  while(!tile || (tileList && checkCollision(tileList,tile ))) {
     tile = {
       id: currentId++,
       x: getRandomInteger(1, MAX_POS),
