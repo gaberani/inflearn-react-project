@@ -8,6 +8,7 @@ export default function useMoveTile({ tileList, setTileList, setScore }) {
     const score = newTileList.reduce((acc, item) => (item.isMerged ? acc + item.value : acc),
       0,
     );
+    setScore(v => v + score);
     const newTile = makeTile(newTileList);
     newTile.isNew = true;
     newTile.isMerged = true;
